@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من الظل إلى النور | مدرسة مشيرفة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --green: #2e7d32;
+            --purple: #6a1b9a;
+            --orange: #d84315;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .visual-logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            position: relative;
+            background: linear-gradient(135deg, rgba(26,35,126,0.2), rgba(255,160,0,0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: float 4s ease-in-out infinite;
+        }
+        .visual-logo::before {
+            content: '🌑';
+            position: absolute;
+            right: 20px;
+            font-size: 60px;
+            animation: moveToLight 3s ease-in-out infinite;
+        }
+        .visual-logo::after {
+            content: '☀️';
+            position: absolute;
+            left: 20px;
+            font-size: 70px;
+            animation: glow 2s ease-in-out infinite;
+        }
+        .arrow-bridge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            animation: slideRight 2s ease-in-out infinite;
+        }
+        header h1 {
+            font-size: clamp(2.5em, 6vw, 4em);
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes moveToLight {
+            0%, 100% { right: 20px; opacity: 0.5; }
+            50% { right: 50%; opacity: 1; }
+        }
+        @keyframes glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.5); }
+        }
+        @keyframes slideRight {
+            0%, 100% { transform: translate(-50%, -50%) translateX(-10px); opacity: 0.6; }
+            50% { transform: translate(-50%, -50%) translateX(10px); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="visual-logo">
+            <span class="arrow-bridge">→</span>
+        </div>
+        <h1>🌙 من الظل إلى النور ☀️</h1>
+        <p style="font-size: 1.5em; margin: 20px 0;">رحلة تحويل الطلاب من مغمورين إلى شخصيات ذات معنى وقيمة</p>
+        <p style="font-size: 1.2em;">مدرسة مشيرفة الابتدائية</p>
+    </header>
+    <div style="text-align: center; padding: 100px 20px;">
+        <h2 style="font-size: 3em; color: var(--primary); margin-bottom: 30px;">المشروع قيد التطوير</h2>
+        <p style="font-size: 1.5em; max-width: 800px; margin: 0 auto; line-height: 2;">
+            نعمل حالياً على إنشاء منصة تفاعلية شاملة تحتوي على:<br><br>
+            🚀 نظام تتبع المشاركة الذكي<br>
+            💪 تطبيق الاسترخاء والتأمل<br>
+            📢 منصة النشر والمشاركة<br>
+            🏆 نظام الإنجازات والشارات<br><br>
+            <strong>قريباً جداً...</strong>
+        </p>
+    </div>
+</body>
+</html>
